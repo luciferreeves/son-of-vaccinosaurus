@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
     res.send("Son of Vaccinosaurus says Grrrrr!");
 });
 
-app.get("/calenderByPin", (req, res) => {
+app.get("/api/pin", (req, res) => {
     const pincode = req.query.pincode;
     const date = req.query.date;
     const config = {
@@ -34,7 +34,7 @@ app.get("/calenderByPin", (req, res) => {
             res.send(error);
         });
 });
-app.get("/calenderByDistrict", (req, res) => {
+app.get("/api/district", (req, res) => {
     const districtID = req.query.district_id;
     const date = req.query.date;
     const config = {
